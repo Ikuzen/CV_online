@@ -1,0 +1,173 @@
+body{
+  height: 95vh;
+  width: 100%;
+  max-height:100%;
+  max-width: 95vmin;
+  background-color: black;
+  display: grid;
+grid-template-areas: "header" "content";
+grid-template-rows: 35% 65%;
+grid-gap: 2%;
+position: absolute;
+left: 10vmin;
+background-image: url("../Assets/images/starry-sky-background-png-starry-sky-background-1920.png")
+}
+
+header{
+  grid-area: header;
+  background-color: white;
+  min-height: 100%;
+  min-width: 100%;
+  display: flex;
+  border:5px inset ;
+  display: grid;
+  grid-template-areas: "infos-1" "infos-2";
+  grid-template-rows: 70% auto;
+}
+#infos-1{
+  grid-area: infos-1;
+  display: grid;
+  grid-template-areas: "pfp names";
+  grid-template-columns: 30% auto
+}
+#pfp{
+  grid-area: pfp;
+  position: relative;
+}
+#names{
+  grid-area: names;
+  position: relative;
+}
+#infos-2{
+  grid-area:infos-2
+}
+hr{
+  color: cyan;
+  size: 3px
+}
+header>img{
+  height: 20vmin;
+  width: 20vmin
+}
+#content{
+  min-height: 100%;
+  min-width: 100%;
+  display: grid;
+  grid-area: content;
+  grid-template-areas: "wrapper-1 wrapper-2";
+  grid-template-columns: 55% auto;
+  grid-gap: 2%
+}
+#wrapper-1{
+  min-height: 100%;
+  min-width: 100%;
+  display: grid;
+  grid-area: wrapper-1;
+  grid-template-areas: "experience" "language" "hobbies";
+  grid-template-rows: 50% 30% 20%;
+  grid-gap: 2%;
+
+}
+#wrapper-2{
+  min-height: 100%;
+  min-width: 100%;
+  display: grid;
+  grid-area: wrapper-2;
+  grid-template-areas: "training" "skills" ".";
+  grid-template-rows: 40% 55% 5%;
+  grid-gap: 2%;
+}
+
+#experience{
+  min-height: 100%;
+  min-width: 100%;
+  grid-area: experience;
+  background-color: blue;
+  border:5px inset ;
+  display: grid;
+  grid-template-areas: "upper-div1 upper-div1" "bar-1 experience-2" ;
+  grid-template-columns: 10% auto;
+  grid-template-rows: 25% auto;
+}
+#upper-div1{
+  grid-area: upper-div1;
+  display: flex;
+  text-align: center;
+  flex-direction: column; 
+}
+#bar{
+  grid-area: bar-1
+}
+#experience-2{
+  grid-area: experience-2
+}
+#language{
+  min-height: 100%;
+  min-width: 100%;
+  grid-area: language;
+  background-color: violet;
+  border:5px inset ;
+  display: grid;
+  grid-template-areas: 
+  "upper-language upper-langage"
+  "english english-bar"
+  "spanish spanish-bar";
+  grid-template-rows:1fr 1fr 1fr ;
+  grid-template-columns: 30% auto;
+
+}
+#upper-langage{
+  grid-area: language
+}
+#english{
+  grid-area: english
+}
+#english-bar{
+  grid-area: english-bar
+}
+#spanish{
+  grid-area:spanish
+}
+#spanish-bar{
+  grid-area: spanish-bar
+}
+#hobbies{
+  min-height: 100%;
+  min-width: 100%;
+  grid-area: hobbies;
+  background-color: red;
+  border:5px inset ;
+
+
+}
+#training{
+  min-height: 100%;
+  min-width: 100%;
+  grid-area: training;
+  background-color: yellowgreen ;
+  border:5px inset ;
+  display: grid;
+  grid-template-areas: 
+  "upper-training upper-training"
+   "bar-training training-2";
+  grid-template-rows: 25% auto;
+  grid-template-columns: 25% auto
+}
+#upper-training{
+  grid-area: upper-training
+}
+#bar-training{
+  grid-area: bar-training
+}
+#training-2{
+  grid-area:training-2
+}
+#skills{
+  min-height: 100%;
+  min-width: 100%;
+  grid-area: skills;
+  background-color: green;
+  border:5px inset ;
+
+
+}
