@@ -1,127 +1,241 @@
 @font-face{
-    font-family: "super-mario";
-    src: url("../Assets/font/CHLORINP.TTF")
+  font-family: "Space";
+  src: url("../Assets/font/moonhouse.ttf")
 }
 
-body{ 
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-  flex-wrap: wrap;
+body {
+  height: 95vh;
+  width: 100%;
+  max-height: 100%;
+  max-width: 95vmin;
+  background-color: black;
+  font-family: space;
+  display: grid;
+  grid-template-areas: "header""content";
+  grid-template-rows: 35% 65%;
+  grid-gap: 2%;
+  position: absolute;
+  left: 20vw;
+  background-image: url("../Assets/images/starry-sky-background-png-starry-sky-background-1920.png");
+  opacity: 0.9;
+}
+
+header {
+  grid-area: header;
+  background-color: #1c253c;
+  color: gold;
+  min-height: 100%;
+  min-width: 100%;
+  display: flex;
+  border: 5px inset;
+  display: grid;
+  grid-template-areas: "infos-1""infos-2";
+  grid-template-rows: 70% auto;
+}
+
+#infos-1 {
+  grid-area: infos-1;
+  display: grid;
+  grid-template-areas: "pfp names";
+  grid-template-columns: 30% auto
+}
+
+#pfp {
+  grid-area: pfp;
+  position: relative;
+}
+
+#names {
+  grid-area: names;
+  position: relative;
+}
+
+#infos-2 {
+  grid-area: infos-2
+}
+
+hr {
+  color: cyan;
+  size: 3px
+}
+
+header>img {
+  height: 20vmin;
+  width: 20vmin
+}
+
+#content {
+  min-height: 100%;
+  min-width: 100%;
+  display: grid;
+  grid-area: content;
+  grid-template-areas: "wrapper-1 wrapper-2";
+  grid-template-columns: 55% auto;
+  grid-gap: 2%
+}
+
+#wrapper-1 {
+  min-height: 100%;
+  min-width: 100%;
+  display: grid;
+  grid-area: wrapper-1;
+  grid-template-areas: "experience""language""hobbies";
+  grid-template-rows: 50% 30% 20%;
+  grid-gap: 2%;
+
+}
+
+#wrapper-2 {
+  min-height: 100%;
+  min-width: 100%;
+  display: grid;
+  grid-area: wrapper-2;
+  grid-template-areas: "training""skills"".";
+  grid-template-rows: 40% 55% 5%;
+  grid-gap: 2%;
+}
+
+#experience {
+  min-height: 100%;
+  min-width: 100%;
+  grid-area: experience;
+  background-color: #1f3e5a;
+  color: gold;
+  border: 5px inset;
+  display: grid;
+  grid-template-areas: "upper-div1 upper-div1""bar-1 experience-2";
+  grid-template-columns: 10% auto;
+  grid-template-rows: 25% auto;
+}
+
+#upper-div1 {
+  grid-area: upper-div1;
+  display: flex;
+  text-align: center;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-    background-color: gray;
-    margin-top: 0;
 }
 
-header{
-    height:90vh;
-    width: 90vw;
-    display: flex;
-    justify-content: center;
-    transition: margin-right 4s ease-in-out 1s;
-
-}
-header:active{
-    transition: all 1s ease-out;
+#bar {
+  grid-area: bar-1
 }
 
-#start{
-    display:flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center
+#experience-2 {
+  grid-area: experience-2
 }
-#content{
-    border:20px inset #87ceeb ;
-    background: skyblue;
-    /*display: grid;*/
-    grid-area: content;
-    height: 90vmin;
-    width: 90vmin;
-    box-sizing: border-box;
-    margin:2%;
-    position: relative;
-    grid-template-areas: "title-select""category-1" "category-2";
-    grid-template-rows: 20% 40% 40%
-    
-    
-}
-#title-select{
-    grid-area: title-select;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: super-mario;
-    color:mediumblue;
-    font-size:50px
-}
-#category-1{
-    grid-area: category-1;
-    display:grid;
-    grid-template-areas: 
-    " experience education" " skills projects";
-    grid-template-rows: auto auto;
-    grid-template-columns: auto auto;
-}
-#category-1 > div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#category-2{
-    grid-area: category-2;
-    display: grid;
-}
-#experience,#btn-1{
-    grid-area:experience;
-    
-}
-#experience{
-    height:5vmin;
-    width: 20vmin;
-}
-#btn-1{
-    position: relative;
-}
-#education,#btn-2{
-    grid-area: education;
-    height:5vmin;
-    width: 20vmin;
+
+#language {
+  min-height: 100%;
+  min-width: 100%;
+  grid-area: language;
+  background-color: #145051;
+  color: goldenrod;
+  border: 5px inset;
+  display: grid;
+  grid-template-areas:
+    "upper-language upper-langage"
+    "english english-bar"
+    "spanish spanish-bar";
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 30% auto;
 
 }
-#btn-2{
-    position: relative;
+
+#upper-langage {
+  grid-area: language
+}
+
+#english {
+  grid-area: english
+}
+
+#english-bar {
+  grid-area: english-bar
+}
+
+#spanish {
+  grid-area: spanish
+}
+
+#spanish-bar {
+  grid-area: spanish-bar
+}
+
+#hobbies {
+  min-height: 100%;
+  min-width: 100%;
+  grid-area: hobbies;
+  background-color: #3c1c31;
+  color: mediumturquoise;
+  border: 5px inset;
 
 
 }
-#skills,#btn-3{
-    grid-area: skills;
-    height:5vmin;
-    width: 20vmin;
+
+#training {
+  min-height: 100%;
+  min-width: 100%;
+  grid-area: training;
+  background-color: #281c3c;
+  color: yellowgreen;
+  border: 5px inset;
+  display: grid;
+  grid-template-areas:
+    "upper-training upper-training"
+    "bar-training training-2";
+  grid-template-rows: 25% auto;
+  grid-template-columns: 25% auto
 }
-#btn-3{
-    position: relative;
+
+#upper-training {
+  grid-area: upper-training
+}
+
+#bar-training {
+  grid-area: bar-training
+}
+
+#training-2 {
+  grid-area: training-2
+}
+
+#skills {
+  min-height: 100%;
+  min-width: 100%;
+  grid-area: skills;
+  background-color: #281c3c;
+  color: ghostwhite;
+  border: 5px inset;
+  display: grid;
+  /* grid-template-areas: "upper-skills upper-skills" "skills-1 bar-skills"; */
+  grid-template-columns: 30% auto;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 
 }
-#projects,#btn-4{
-    height:5vmin;
-    width: 20vmin;
-}
-#btn-4{
-    position: relative;
 
+#upper-skills {
+  /* grid-area: upper-skills; */
+  grid-column: 1/3;
 }
-.present{
-    display: grid
+
+/* }
+#skills-1{
+  grid-area: skills-1;
+  font-family: Verdana, Geneva, Tahoma, sans-serif
 }
-.future, .past{
-    display: none;
-    opacity: 0
+#bar-skills{
+  grid-area: bar-skills
+}  */
+
+@media (max-width:1200px) {
+  body {
+    left: 5vw
+  }
 }
-button{
-    border: 10px inset blue;
-    background: blue;
-    max-width: 100px;
+
+@media (max-width:1200px) {
+  body {
+    left: 0vw
+  }
 }
+
+
